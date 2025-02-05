@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order and Delivery</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="main.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#food">Category</a></li>
+                <li><a href="#food-menu">Menu</a></li>
+                <li><a href="#testimonials">Testimonial</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <h1 class="logo">Eat Fresh</h1>
+        </div>
+    </nav>
+
+    <section class="showcase-area" id="showcase">
+        <div class="showcase-container">
+            <h1 class="main-title">Order Delicious Food</h1>
+            <p>Quick and easy online ordering</p>
+            <a href="#menu" class="btn btn-primary">Explore Menu</a>
+        </div>
+    </section>
+
+    <section id="menu">
+        <h2 style="text-decoration:underline;">Our Menu</h2>
+
+        <h3 style="font-weight: bold; font-size: 2rem; text-decoration: underline;">Food Items</h3>
+        <div class="menu-container container" style="display: flex; justify-content: space-between; gap: 20px;">
+            <!-- Food Item Example -->
+            <div class="menu-item" style="flex: 1; max-width: 30%;">
+                <div class="menu-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWtFVGsI7ix4LV4xFcUcAri4oNyI7e9oieJA&s"
+                        alt="Food Item 1" style="width: 100%; height: auto;">
+                </div>
+                <div class="menu-description">
+                    <h3 class="menu-title">Ekdum mast pasta</h3>
+                    <p>mastwala pasta</p>
+                    <p class="menu-price">&#8377; 250</p>
+
+                    <label for="quantity1">Quantity:</label>
+                    <select id="quantity1" class="quantity-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <button onclick="addToCart('Ekdum mast pasta', 250, document.getElementById('quantity1').value)"
+                        class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-container container" style="display: flex; justify-content: space-between; gap: 20px;">
+                <!-- Food Item Example -->
+                <div class="menu-item" style="flex: 1; max-width: 30%;">
+                    <div class="menu-img">
+                        <img src="grilledchicken.jpg" alt="Food Item 2" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="menu-description">
+                        <h3 class="menu-title">Grilled Chicken</h3>
+                        <p>Juicy grilled chicken with a smoky flavor.</p>
+                        <p class="menu-price">&#8377; 300</p>
+
+                        <!-- Hidden inputs to send item details -->
+                        <input type="hidden" name="itemName" value="Grilled Chicken">
+                        <input type="hidden" name="itemPrice" value="300">
+
+                        <label for="quantity2">Quantity:</label>
+                        <select id="quantity2" name="quantity" class="quantity-select">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <button onclick="addToCart('Grilled Chicken', 300, document.getElementById('quantity2').value)"
+                            class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-container container" style="display: flex; justify-content: space-between; gap: 20px;">
+                    <!-- Food Item Example -->
+                    <div class="menu-item" style="flex: 1; max-width: 30%;">
+                        <div class="menu-img">
+                            <img src="cheeseburger.jpg" alt="Food Item 3" style="width: 100%; height: auto;">
+                        </div>
+                        <div class="menu-description">
+                            <h3 class="menu-title">Veg Burger</h3>
+                            <p>Delicious veggie patty in a soft bun with fresh toppings.</p>
+                            <p class="menu-price">&#8377; 150</p>
+
+                            <!-- Hidden inputs to send item details -->
+                            <input type="hidden" name="itemName" value="Veg Burger">
+                            <input type="hidden" name="itemPrice" value="150">
+
+                            <label for="quantity3">Quantity:</label>
+                            <select id="quantity3" name="quantity" class="quantity-select">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <button onclick="addToCart('Veg Burger', 150, document.getElementById('quantity3').value)"
+                                class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-container container"
+                        style="display: flex; justify-content: space-between; gap: 20px;">
+                        <!-- Food Item Example -->
+                        <div class="menu-img">
+                            <img src="mango smoothie.jpg" alt="Beverage Item 1" style="width: 100%; height: auto;">
+                        </div>
+                        <div class="menu-description">
+                            <h3 class="menu-title">Mango Smoothie</h3>
+                            <p>Sweet and refreshing mango smoothie.</p>
+                            <p class="menu-price">&#8377; 150</p>
+
+                            <!-- Hidden inputs to send item details -->
+                            <input type="hidden" name="itemName" value="Mango Smoothie">
+                            <input type="hidden" name="itemPrice" value="150">
+
+                            <label for="quantity4">Quantity:</label>
+                            <select id="quantity4" name="quantity" class="quantity-select">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <button
+                                onclick="addToCart('Mango Smoothie', 150, document.getElementById('quantity4').value)"
+                                class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Repeat similar structure for other items -->
+                </div>
+    </section>
+
+    <section id="order">
+        <h2>Order Summary</h2>
+        <div class="order-summary" id="cart">
+            <h3>Order Summary</h3>
+            <p>No items in cart.</p>
+        </div>
+        <form action="/checkout" method="POST" onsubmit="return submitCart()">
+            <input type="text" name="userName" placeholder="Your Name" required>
+            <input type="text" name="userPhone" placeholder="Your Phone Number" required>
+            <input type="hidden" name="cartItems" id="cartItems">
+            <button class="checkout-btn" type="submit">Checkout</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container container">
+            <p>Reach out for any questions or feedback!</p>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button class="contact-submit-btn">Submit</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 RS Orders. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        let cart = [];
+
+        function addToCart(itemName, itemPrice, quantity) {
+            const item = { itemName, itemPrice, quantity };
+            cart.push(item);
+            renderCart();
+        }
+
+        function renderCart() {
+            const cartDiv = document.getElementById('cart');
+            cartDiv.innerHTML = "<h3>Order Summary</h3>";
+
+            if (cart.length === 0) {
+                cartDiv.innerHTML += "<p>No items in cart.</p>";
+                return;
+            }
+
+            // Display cart items
+            cart.forEach((item, index) => {
+                cartDiv.innerHTML += `<p>${item.itemName} - ${item.quantity} x &#8377;${item.itemPrice}</p>`;
+            });
+
+            // Update the hidden input with the serialized cart
+            document.getElementById('cartItems').value = JSON.stringify(cart);
+        }
+
+        function submitCart() {
+            // Ensure that the cart items are updated in the hidden input before submitting
+            document.getElementById('cartItems').value = JSON.stringify(cart);
+            return true; // Proceed with form submission
+        }
+
+    </script>
+</body>
+
+</html>
